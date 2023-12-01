@@ -1,13 +1,6 @@
 # Proywv4
 
-Proyecto de Login
-
-Este proyecto implementa una página de inicio de sesión simple utilizando tecnologías web estándar como HTML, CSS y JavaScript.
-
-Archivos Principales
-index.html: Contiene la estructura HTML de la página de inicio de sesión.
-CSS/style.css: El archivo de estilo que proporciona el diseño visual para la página.
-JS/login.js: El script JavaScript que maneja la validación del formulario y el inicio de sesión.
+Login
 
 Funcionalidad
 La página presenta un formulario de inicio de sesión con campos para el nombre de usuario (email) y contraseña.
