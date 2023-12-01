@@ -4,7 +4,7 @@ Login
 
 Funcionalidad
 
-La página presenta un formulario de inicio de sesión con campos para el nombre de usuario (email) y contraseña.
+La página presenta un formulario de inicio de sesión con campos para el nombre de usuario (tambien se puede configurar para que sea por un email) y contraseña.
 
 La contraseña debe cumplir con ciertos requisitos definidos en la función validarContraseña.
 
