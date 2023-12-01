@@ -3,12 +3,16 @@
 Login
 
 Funcionalidad
-La página presenta un formulario de inicio de sesión con campos para el nombre de usuario (email) y contraseña.
-La contraseña debe cumplir con ciertos requisitos definidos en la función validarContrasena.
-Se proporciona retroalimentación visual y mensajes de error en caso de que el usuario no complete todos los campos o la contraseña no cumpla con los requisitos.
-Se simula la validación del usuario mediante una función validarUsuario que compara el nombre de usuario y la contraseña con una lista de usuarios autorizados después de un retardo de 2 segundos.
-Si las credenciales son válidas, se redirige al usuario a una página principal (main o la pagina de elementos) después de un breve retraso.
 
+La página presenta un formulario de inicio de sesión con campos para el nombre de usuario (email) y contraseña.
+
+La contraseña debe cumplir con ciertos requisitos definidos en la función validarContraseña.
+
+Se proporciona retroalimentación visual y mensajes de error en caso de que el usuario no complete todos los campos o la contraseña no cumpla con los requisitos.
+
+Se simula la validación del usuario mediante una función validarUsuario que compara el nombre de usuario y la contraseña con una lista de usuarios autorizados después de un retardo de 2 segundos.
+
+Si las credenciales son válidas, se redirige al usuario a una página principal (main o la pagina de elementos) después de un breve retraso.
 
 //
 
