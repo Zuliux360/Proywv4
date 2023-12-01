@@ -452,6 +452,9 @@ function limpiarFiltro() {
     // Reset the current page to 1 and recreate the cards without filters
     currentPage = 1;
     createCards();
+
+     // Redirigir a la página principal
+     window.location.href = "main.html";
 }
 
 
