@@ -19,7 +19,9 @@ Este segmento del proyecto presenta una página que muestra una serie de tarjeta
 Funcionalidad
 
 Tarjetas de Productos: Cada tarjeta muestra información sobre un producto específico, incluyendo imagen, título, descripción, precio y cantidad.
+
 Filtrado de Productos: Se pueden aplicar filtros por título y descripción para encontrar productos específicos más fácilmente.
+
 Paginación: Permite navegar a través de las distintas páginas de productos, mostrando un número específico de productos por página.
 
 Ventana de Detalles: Al hacer clic en "Ver Detalle" en una tarjeta, se muestra una ventana emergente con detalles más específicos del producto, incluyendo la posibilidad de editar la descripción, cantidad y precio.
