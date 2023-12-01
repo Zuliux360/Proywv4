@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Cards - Tarjetas con efecto Hover</title>
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="/CSS/estilos.css">
+</head>
+
+<body>
+<main class="contenedor">
+    <div class="producto-info">
+        <div class="logo">
+            <img src="/img/logo.jpeg" alt="Logo">
+        </div>
+        <div class="informacion">
+            <h2>Nombre del Producto</h2>
+            <p>Descripción del producto aquí.</p>
+        </div>
+        <button class="cerrar-btn">Cerrar</button>
+    </div>
+    <!-- Tarjetas-->
+    <div class="title-cards">
+        <h2>Miscelanea El BAKI</h2>
+    </div>
+	
+	<div id="tarjetaDetalle"></div>
+	<!-- Agrega estos dos campos de entrada para filtrar por título y descripción -->
+<input type="text" id="filtroTitulo" placeholder="Filtrar por título">
+<input type="text" id="filtroDescripcion" placeholder="Filtrar por descripción">
+<button class="filt"  onclick="aplicarFiltro()">Aplicar Filtro</button>
+<button class="limpi" onclick="limpiarFiltro()">Limpiar Filtro</button>
+
+
+
+    <div class="container-card" id="cardContainer"></div>
+
+	
+
+	<div class="pagination">
+		<div class="pagination-info">
+			<p>PAGINA: <span id="currentPage">1</span>/<span id="totalPages">1</span></p>
+			<p>Articulos totales: <span id="totalItems">0</span></p>
+		</div>
+		<div class="navigation-buttons">
+			<button id="prevPage" onclick="prevPage()">Atras</button>
+			<button id="nextPage" onclick="nextPage()">Siguiente</button>
+		</div>
+		<div class="items-remaining">
+			<p>Artículos restantes: <span id="itemsRemaining">0</span></p>
+		</div>
+	</div>
+	
+</main>
+
+	<footer>
+		<div class="redes-sociales">
+			
+			<i class='bx bxl-whatsapp-square bx-lg' style='color:#26da1d'  ></i>
+			<i class='bx bxl-facebook-circle bx-lg' style='color:#244aec'  ></i>
+			<i class='bx bxl-tiktok bx-lg' style='color:#ec0909'  ></i>
+		</div>
+		<div class="informacion-dulceria">
+			<div class="columna">
+				<h3>Contacto</h3>
+				<p>Teléfono: +573188085152</p>
+				<p>Dirección: Calle 5A #23-80</p>
+			</div>
+			<div class="columna">
+				<h3>Horario de Atención</h3>
+				<p>Lunes a Viernes: 9am - 6pm</p>
+				<p>Sábado y Domingo: Cerrado</p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Include your JavaScript file -->
+	<script src="/JS/script.js"></script>
+</body>
+
+</html>

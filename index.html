@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Login de la U</title>
+  <link rel="stylesheet" href="/CSS/style.css">
+</head>
+
+<body>
+
+  <div class="login-box">
+    <img src="/Img/Icono1.png" class="avatar" alt="Avatar miscelanea">
+    <h1>Iniciar Sesión</h1>
+    <form id="loginForm" onsubmit="validateLogin(event)">
+      <label for="email">Usuario</label>
+      <input type="text" id="email" placeholder="Ingresa tu usuario">
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" placeholder="Ingresa tu contraseña">
+      <input type="submit" class="btn" value="Ingresar">
+      <div id="loading" style="display: none;">Cargando...</div>  
+      <div id="error-message" style="display: none; color: red;"></div>
+      <a href="#">Olvidaste tu contraseña?</a><br>
+      <a href="#">No tienes cuenta aún?</a>
+    </form>
+    <button type="button" class="btn" onclick="clearForm()">Limpiar</button>
+  </div>
+  <script src="/JS/login.js"></script>
+</body>
+
+</html>
