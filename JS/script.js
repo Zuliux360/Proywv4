@@ -403,20 +403,21 @@ const cardData = [
 ];
 const itemsPerPage = 10;
 let currentPage = 1;
-// Function to create HTML elements for each card and append them to the container
+// Esta fncion me crea elementos HTML para cada tarjeta y los agrega al contenedor.
 function updateCardInContainer(id) {
     const cardElement = document.querySelector(`#cardContainer .card[data-id="${id}"]`);
     const updatedCard = cardData.find(card => card.id === id);
     
 
-    // Update the card content
+    // Se actualiza el contenido de la tarjeta.
     cardElement.querySelector("img").src = updatedCard.image;
     cardElement.querySelector("img").alt = updatedCard.title;
     cardElement.querySelector("h3").textContent = updatedCard.title;
     cardElement.querySelector("p:nth-child(2)").textContent = `Descripcion: ${updatedCard.description}`;
     cardElement.querySelector("p:nth-child(3)").textContent = `Precio: ${updatedCard.precio}`;
     cardElement.querySelector("p:nth-child(4)").textContent = `Cantidad: ${updatedCard.cantidad}`;
-    // Update other properties as needed
+    // Actualice otras propiedades si necesitas, recuereda Baki.
+
 }
 
 // ... (existing code)
@@ -432,11 +433,11 @@ function aplicarFiltro() {
         return tituloLowerCase.includes(filtroTitulo) && descripcionLowerCase.includes(filtroDescripcion);
     });
 
-    // Update cardData with the filtered data
+    // Actualiza el "cardData" con los datos que se filtraron
     cardData.length = 0;
     Array.prototype.push.apply(cardData, filteredData);
 
-    // Reset the current page to 1 and recreate the cards
+    // Restablece la página actual a la pagina "1" y recrea las tarjetas.
     currentPage = 1;
     createCards();
 }
@@ -445,11 +446,11 @@ function limpiarFiltro() {
     document.getElementById("filtroTitulo").value = "";
     document.getElementById("filtroDescripcion").value = "";
 
-    // Restore the original cardData
+    // Restaura la cardData original
     cardData.length = 0;
     Array.prototype.push.apply(cardData, originalCardData);
 
-    // Reset the current page to 1 and recreate the cards without filters
+    // Restablece la página actual a la "1" y recrea las tarjetas sin filtros
     currentPage = 1;
     createCards();
 
@@ -489,7 +490,7 @@ function createCards() {
         cardContainer.appendChild(cardElement);
     }
 
-    updatePagination(); // Now, call this function after creating the cards
+    updatePagination(); // Ahora desde aqui, se llama esta función después de crear las tarjetas.
 }
 function updatePagination() {
     const totalPages = Math.ceil(cardData.length / itemsPerPage);
@@ -550,7 +551,7 @@ function verDetalle(id) {
             `;
         })
         .catch(error => {
-            // Handle errors if necessary
+            // Gestiona los errores si es necesario
             console.error("Error:", error);
             tarjetaDetalle.innerHTML = `<p>Error al cargar los detalles</p>`;
         });
@@ -559,9 +560,9 @@ function verDetalle(id) {
 
 function volverAInicio() {
     const tarjetaDetalle = document.getElementById("tarjetaDetalle");
-    // Reset the content of tarjetaDetalle
+    // Reinicia el contenido de tarjetaDetalle
     tarjetaDetalle.innerHTML = "";
-    // Hide tarjetaDetalle
+    // Oculta tarjetaDetalle
     tarjetaDetalle.style.display = "none";
 }
 function editarDetalle(id) {
@@ -569,12 +570,12 @@ function editarDetalle(id) {
     const PrecioDetalle = document.getElementById("PrecioDetalle");
     const cantidadDetalle = document.getElementById("cantidadDetalle");
 
-    // Save the original values for potential cancellation
+    // Salva los valores originlas, por si hay una posible cancelacion
     const originalDescripcion = descripcionDetalle.innerText.trim();
     const originalPrecio = PrecioDetalle.innerText.trim();
     const originalCantidad = cantidadDetalle.innerText.trim();
 
-    // Create and append input fields if not already added
+    // Crear y agrega campos de entrada si aún no se han agregado
     if (descripcionDetalle.children.length === 0) {
         const descripcionInput = document.createElement("input");
         descripcionInput.type = "text";
@@ -591,7 +592,7 @@ function editarDetalle(id) {
         const precioInput = document.createElement("input");
         precioInput.type = "text";
         precioInput.value = originalPrecio;
-        PrecioDetalle.innerHTML = "";  // Fix variable name
+        PrecioDetalle.innerHTML = "";  // repara el nombre de la variable
         PrecioDetalle.appendChild(precioInput);
 
         const editarButton = document.querySelector("button[onclick*='editarDetalle']");
@@ -601,11 +602,11 @@ function editarDetalle(id) {
             guardarCambios(id, descripcionInput.value, cantidadInput.value, precioInput.value);
         });
 
-        // Add a cancel button for reverting changes
+        // Añade un boton de cancelar para revertir los cambios
         const cancelarButton = document.createElement("button");
         cancelarButton.innerText = "Cancelar";
         cancelarButton.addEventListener("click", function() {
-            // Restore original values and reset the view
+            // Restaura los valores originales y reinicia la vista
             descripcionDetalle.innerHTML = `<span>${originalDescripcion}</span>`;
             cantidadDetalle.innerHTML = `<span>${originalCantidad}</span>`;
             PrecioDetalle.innerHTML = `<span>${originalPrecio}</span>`;
@@ -626,7 +627,7 @@ function guardarCambios(id, nuevaDescripcion, nuevaCantidad, nuevoPrecio) {
     editedCard.cantidad = nuevaCantidad;
     editedCard.precio = nuevoPrecio;
 
-    // Update the details view immediately
+    // Actualiza los detalles automaticamente.
     const tarjetaDetalle = document.getElementById("tarjetaDetalle");
     const selectedCard = cardData.find(card => card.id === id);
     tarjetaDetalle.innerHTML = `
@@ -641,11 +642,11 @@ function guardarCambios(id, nuevaDescripcion, nuevaCantidad, nuevoPrecio) {
         </div>
     `;
 
-    // Update the specific card in the cardContainer
-    updateCardInContainer(id); // This line was missing in your original code
+    // Actualiza la tarjeta especifica en cardContainer
+    updateCardInContainer(id); 
 }
 
 
 
-// Call the function to create the cards when the page loads
+// Llama la función para crear las tarjetas cuando se cargue la página.
 window.onload = createCards;

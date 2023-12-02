@@ -1,5 +1,5 @@
 function validateLogin(event) {
-    event.preventDefault(); // Prevent the default form submission behavior
+    event.preventDefault(); // Este evita el comportamiento de envío del formulario predeterminado
 
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
@@ -14,12 +14,12 @@ function validateLogin(event) {
         showError('La contraseña debe contener al menos 8 caracteres, incluidos al menos 1 letra mayúscula, 1 letra minúscula, 2 dígitos y 1 carácter especial.');
         return;
     }
-    // ... (existing code)
+    // ... (Carga correcta)
 
- // Function to clear the form fields
+ // Esa funcion limpia los campos
 
 
- // ... (existing code)
+ // ... (Carga correcta)
 
 
     errorDiv.style.display = 'none';
@@ -57,9 +57,9 @@ function validarContrasena(password) {
 
 function validarUsuario(email, password) {
     var usuariosAutorizados = {
-        'bakiyo': 'Ickkck2002*',
-        'bakigod': 'Ickkck0618*',
-        'bakimalo': 'Ickkck1001*'
+        'bakiyo@hotmail.com': 'Ickkck2002*',
+        'bakigod@outlook.com': 'Ickkck0618*',
+        'bakimalo@gmail.com': 'Ickkck1001*'
     };
 
     return new Promise(function (resolve, reject) {
